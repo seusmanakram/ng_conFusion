@@ -3,8 +3,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule  } from '@angular/http';
+import { MaterialModule } from './material.module';
 import {MatSelectModule, MatListModule, MatGridListModule , MatInputModule, MatSlideToggleModule ,
-  MatToolbarModule , MatDialogModule , MatCardModule ,MatProgressSpinnerModule, MatButtonModule , MatSliderModule} from '@angular/material';
+  MatToolbarModule , MatDialogModule , MatCardModule ,MatProgressSpinnerModule, MatButtonModule , MatSliderModule,
+  MatIconModule, MatMenuModule
+
+
+} from '@angular/material';
 //import { MaterialModule} from '@angular/material';
 import { FlexLayoutModule } from "@angular/flex-layout";
 
@@ -28,8 +33,15 @@ import { MenuComponent } from './menu/menu.component';
     HttpModule,
     FlexLayoutModule,
     MatSelectModule , MatGridListModule , MatProgressSpinnerModule , MatInputModule, MatSlideToggleModule, MatDialogModule,
-    MatToolbarModule, MatCardModule, MatButtonModule , MatSliderModule 
+    MatToolbarModule, MatCardModule, MatButtonModule , MatSliderModule,MatIconModule, MatMenuModule
   ],
+  // exports: [
+  //   MatButtonModule,
+  //   MatToolbarModule,
+  //   MatCardModule,
+  //   MatIconModule, 
+  //   MatMenuModule
+  //   ],
   providers: [],
   bootstrap: [AppComponent]
 })
