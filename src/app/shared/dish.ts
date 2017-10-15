@@ -1,3 +1,5 @@
+import {Comment} from './comment';
+
 export class Dish {
 
     // Properties associated with DISH will help construct menu 
@@ -8,7 +10,6 @@ export class Dish {
     label:string;
     price:string;
     description:string;
-
-
+    comments:Comment[];
 
 }

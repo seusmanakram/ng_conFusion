@@ -1,0 +1,50 @@
+<div class="container" fxLayout="row" fxLayout.sm="column" fxLayout.xs="column" fxLayoutAlign.gt-md="space-around center"
+  fxLayoutGap="10px" fxLayoutGap.xs="0">
+
+  <div fxFlex="40" *ngIf="dish">
+    <md-card>
+      <md-card-header>
+        <md-card-title>
+          <h3>{{dish.name | uppercase}}</h3>
+        </md-card-title>
+      </md-card-header>
+      <img md-card-image src="{{dish.image}}" alt="{{dish.name}}">
+      <md-card-content>
+        <p>{{dish.description}}</p>
+      </md-card-content>
+      <md-card-actions>
+        <button md-button>LIKE</button>
+        <button md-button>SHARE</button>
+      </md-card-actions>
+    </md-card>
+  </div>
+
+  <!-- 
+      <h2>Comments</h2>
+      
+
+      <p md-line>{{dish.comments[0].comment }}</p>
+         -->
+
+  <div fxFlex="40">
+
+   
+    <md-list *ngIf="dish">
+        <h1>Comments</h1>
+        
+      <md-list-item *ngFor = "let dish of dish.comments" >
+        <md-checkbox ng-model="item.done"></md-checkbox>
+        
+        <div class="md-list-item-text">
+
+          <i md-line>"{{dish.comment }}""</i>
+          <p>{{dish.rating}} Stars</p>
+          <p>{{dish.author }}</p>
+          <p>-- {{dish.date | date}}</p>
+          <br>
+
+        </div>
+      </md-list-item>
+    </md-list>
+
+  </div>
