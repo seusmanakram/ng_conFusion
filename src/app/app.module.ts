@@ -3,6 +3,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule  } from '@angular/http';
+import { ReactiveFormsModule } from '@angular/forms';
 //import { MaterialModule } from './material.module';
 import {MatSelectModule, MatListModule, MatGridListModule , MatInputModule, MatSlideToggleModule ,
   MatToolbarModule , MatDialogModule , MatCardModule ,MatProgressSpinnerModule, MatButtonModule , MatSliderModule,
@@ -48,7 +49,7 @@ import { LoginComponent } from './login/login.component'
     HomeComponent,
     AboutComponent,
     ContactComponent,
-    LoginComponent
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
@@ -58,7 +59,8 @@ import { LoginComponent } from './login/login.component'
     FlexLayoutModule,
     MatSelectModule , MatGridListModule , MatProgressSpinnerModule , MatInputModule, MatSlideToggleModule, MatDialogModule,
     MatToolbarModule, MatCardModule, MatButtonModule , MatSliderModule,MatIconModule, MatMenuModule,
-    AppRoutingModule
+    AppRoutingModule,    ReactiveFormsModule
+    
   ],
   // exports: [
   //   MatButtonModule,
