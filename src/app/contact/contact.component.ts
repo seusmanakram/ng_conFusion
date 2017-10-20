@@ -26,7 +26,7 @@ export class ContactComponent implements OnInit {
       lastname:'',
       telnum:0,
       email:'',
-      agree :false ,
+      agree:false,
       contactType : 'None',
       message:''
 
@@ -34,7 +34,7 @@ export class ContactComponent implements OnInit {
     });
   }
 
-  onsubmit(){
+  onSubmit(){
     this.feedback = this.feedbackForm.value;
     console.log(this.feedback);
     this.feedbackForm.reset();
