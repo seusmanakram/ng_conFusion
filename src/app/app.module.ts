@@ -35,7 +35,8 @@ import {DishService} from './services/dish.service';
 import {PromotionService} from './services/promotion.service';
 import {LeaderService} from './services/leader.service';
 import {ProcessHttpMsgService} from './services/process-httpmsg.service';
-
+import {RestangularModule,Restangular} from 'ngx-restangular';
+import {RestangularConfigFactory} from './shared/restConfig';
 import {AppRoutingModule} from './app-routing/app-routing.module';
 import { LoginComponent } from './login/login.component'
 
@@ -60,7 +61,8 @@ import { LoginComponent } from './login/login.component'
     FlexLayoutModule,
     MatSelectModule , MatGridListModule , MatProgressSpinnerModule , MatInputModule, MatSlideToggleModule, MatDialogModule,
     MatToolbarModule, MatCardModule, MatButtonModule , MatSliderModule,MatIconModule, MatMenuModule,
-    AppRoutingModule,    ReactiveFormsModule
+    AppRoutingModule,    ReactiveFormsModule, 
+    RestangularModule.forRoot(RestangularConfigFactory)
     
   ],
   // exports: [
