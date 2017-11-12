@@ -38,7 +38,8 @@ import {ProcessHttpMsgService} from './services/process-httpmsg.service';
 import {RestangularModule,Restangular} from 'ngx-restangular';
 import {RestangularConfigFactory} from './shared/restConfig';
 import {AppRoutingModule} from './app-routing/app-routing.module';
-import { LoginComponent } from './login/login.component'
+import { LoginComponent } from './login/login.component';
+import { HighlightDirective } from './directives/highlight.directive'
 
 
 @NgModule({
@@ -52,6 +53,7 @@ import { LoginComponent } from './login/login.component'
     AboutComponent,
     ContactComponent,
     LoginComponent,
+    HighlightDirective,
   ],
   imports: [
     BrowserModule,
