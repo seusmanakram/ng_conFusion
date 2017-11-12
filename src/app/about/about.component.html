@@ -80,7 +80,7 @@ fxLayoutGap="10px">
     
     <h2>Corporate Leadership</h2>
      
-     <md-list *ngIf="leaders" >
+     <md-list *ngIf="leaders" [@expand] >
       <md-list-item *ngFor="let leader of leaders" class="items" fxLayout ="row" fxLayoutAlign="center">
         <div fxFlex='10'>
             <img src="{{leader.image}}" alt="">
