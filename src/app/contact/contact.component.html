@@ -32,10 +32,29 @@
     </div>
   </div>
 
+  <div *ngIf = "spinnerAndReviewFlag" [@expand]>
+      <div *ngIf = "!feedbackcopy" [@expand]><h4>Submitting Form</h4><md-spinner></md-spinner></div>
+      <div fxFlex fxFlexOffset="20px" *ngIf=feedbackcopy>
+        <h3>Your Submission</h3>
+        <p>First Name: {{feedbackcopy.firstname}}</p>
+        <p>Last Name: {{feedbackcopy.lastname}}</p>
+        <p>Tel. Number: {{feedbackcopy.telnum}}</p>
+        <p>Email: {{feedbackcopy.email}}</p>
+        <p>Contact You?: {{feedbackcopy.agree}}</p>
+        <p>How?: {{feedbackcopy.contacttype}}</p>
+        <p>Feedback: {{feedbackcopy.message}}</p>
+      </div>
+  </div>
+
+
+
+
+
+
   <div fxFlex fxFelxOffset ="20px" class="form-size">
 
     <h3>Send us your Feedback</h3>
-    <p>{{feedbackForm.value |  json}} {{feedbackForm.status |json}}</p>
+    <p>{{feedbackForm.value |  json}} {{feedbackForm.status | json}}</p>
     
     <form novalidate [formGroup]="feedbackForm" (ngSubmit)="onSubmit()">
         <p>
@@ -91,24 +110,15 @@
             <textarea mdInput formControlName="message" placeholder="Your Feedback" rows=12></textarea>
           </md-input-container>
         </p>
-        <button type="submit" md-button class="background-primary text-floral-white" [disabled]="feedbackForm.invalid">Submit</button>
+        
+        <button type="submit" md-button class="background-primary text-floral-white" [disabled]="feedbackForm.invalid" >Submit</button>
+      
       </form>
 
-      <div fxFlex fxFlexOffset="20px" *ngIf=feedbackCopy>
-        <h3>Your Submission</h3>
-        <p>First Name: {{feedbackCopy.firstname}}</p>
-        <p>Last Name: {{feedbackCopy.lastname}}</p>
-        <p>Tel. Number: {{feedbackCopy.telnum}}</p>
-        <p>Email: {{feedbackCopy.email}}</p>
-        <p>Contact You?: {{feedbackCopy.agree}}</p>
-        <p>How?: {{feedbackCopy.contacttype}}</p>
-        <p>Feedback: {{feedbackCopy.message}}</p>
-      </div>
-      <div [hidden]="showHide || feedbackCopy">
-        <h4>Submitting Form</h4>
-        <md-spinner></md-spinner>
-      </div>
-  </div>
+
+   
+
+</div>
 
 
 </div>

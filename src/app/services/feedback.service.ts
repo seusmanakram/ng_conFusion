@@ -23,13 +23,13 @@ export class FeedbackService {
   submitFeedback(Feedback: Feedback): Observable<Feedback> {
     return this.restangular.all('feedback').post(Feedback);
   }
-  getFeedbacks(): Observable<Feedback[]> {
-    return this.restangular.all('feedback').getList();
-  }
+    // getFeedbacks(): Observable<Feedback[]> {
+    //   return this.restangular.all('feedback').getList();
+    // }
 
-  getFeedback(id: number): Observable<Feedback> {
-    return this.restangular.one('feedback', id).get();
-  }
+    // getFeedback(id: number): Observable<Feedback> {
+    //   return this.restangular.one('feedback', id).get();
+    // }
 
  
 

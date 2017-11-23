@@ -20,6 +20,9 @@ export class ContactComponent implements OnInit {
   feedbackForm: FormGroup;
   feedback: Feedback;
   feedbackcopy:Feedback;
+  spinnerAndReviewFlag = false;
+  
+  
   contactType = ContactType;
   formErrors = {
 
@@ -117,13 +120,11 @@ export class ContactComponent implements OnInit {
     console.log(this.feedback);
     
     this.feedbackservice.submitFeedback(this.feedback)
-      .subscribe(feedback => {
-        this.feedbackcopy = feedback;
-      });
-    setTimeout(() => {
-      this.feedbackcopy = null;
-      
-    }, 5000);
+          .subscribe(feedback => {
+            this.feedbackcopy = feedback;
+            setTimeout(() => {this.spinnerAndReviewFlag = false;}, 5000);  
+          });
+
     this.feedbackForm.reset({
       // 
       firstname:'',
