@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Leader} from '../shared/leader';
+import {Dish} from '../shared/dish';
 import {LeaderService} from '../services/leader.service';
 import {flyInOut,expand} from '../animations/app.animation';
 
@@ -19,7 +20,7 @@ import {flyInOut,expand} from '../animations/app.animation';
 export class AboutComponent implements OnInit {
 
 
-
+  dish:Dish[];
   leaders: Leader[];
   leaderErrMess:string
 
